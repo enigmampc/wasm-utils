@@ -82,7 +82,7 @@ pub fn build(
 			if new_stack_top % 65536 > 0 { stack_top_page += 1 };
 			module = externalize_mem(module, Some(stack_top_page), 16);
 		} else {
-			module = externalize_mem(module, None, 16);
+			module = externalize_mem(module, None, 32);
 		}
 	}
 
