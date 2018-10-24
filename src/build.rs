@@ -83,7 +83,7 @@ pub fn build(
 			module = externalize_mem(module, Some(stack_top_page), 32);
 		} else {
 			// Temp change for enlarging default number of pages for memory size
-			module = externalize_mem(module, Some(17)/*None*/, 32);
+			module = externalize_mem(module, Some(32)/*None*/, 32);
 		}
 	}
 
