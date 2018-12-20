@@ -9,6 +9,9 @@ extern crate parity_wasm;
 extern crate byteorder;
 #[macro_use] extern crate log;
 
+#[macro_use]
+extern crate sgx_tstd as std;
+
 pub static CREATE_SYMBOL: &'static str = "deploy";
 pub static CALL_SYMBOL: &'static str = "call";
 pub static RET_SYMBOL: &'static str = "ret";
@@ -32,6 +35,7 @@ pub use ext::{externalize, externalize_mem, underscore_funcs, ununderscore_funcs
 pub use pack::{pack_instance, Error as PackingError};
 pub use runtime_type::inject_runtime_type;
 
+/*
 #[cfg(not(feature = "std"))]
 mod std {
 	pub use core::*;
@@ -40,4 +44,4 @@ mod std {
 	pub mod collections {
 		pub use alloc::collections::{BTreeMap, BTreeSet};
 	}
-}
+}*/
