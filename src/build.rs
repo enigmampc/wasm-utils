@@ -80,10 +80,10 @@ pub fn build(
 			module = new_module;
 			let mut stack_top_page = new_stack_top / 65536;
 			if new_stack_top % 65536 > 0 { stack_top_page += 1 };
-			module = externalize_mem(module, Some(stack_top_page), 32);
+			module = externalize_mem(module, Some(stack_top_page), 62);
 		} else {
 			// Temp change for enlarging default number of pages for memory size
-			module = externalize_mem(module, Some(30)/*None*/, 32);
+			module = externalize_mem(module, Some(60)/*None*/, 62);
 		}
 	}
 
