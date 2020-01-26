@@ -12,7 +12,7 @@ parity-wasm = { git = "https://github.com/enigmampc/parity-wasm.git", branch = "
 log = { version = "0.4", default-features = false }
 byteorder = { version = "1", default-features = false }
 
-sgx_tstd = { git = "https://github.com/baidu/rust-sgx-sdk.git", rev = "v1.0.9" }
+sgx_tstd = { git = "https://github.com/apache/teaclave-sgx-sdk.git", rev = "v1.1.0" }
 
 [dev-dependencies]
 tempdir = "0.3"
